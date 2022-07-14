@@ -121,5 +121,3 @@ let youGotThis = function() {
 setInterval(youGotThis, 1000);
 
 // Above examples are instances of function callbacks and functions being passed as arguments to other functions
-
-
