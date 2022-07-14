@@ -251,3 +251,58 @@ console.log(x);
 }
 // doingStuff3(); // Error: x is out of scope after the if block ends and can no longer be accessed
 
+
+/* Global Variables --> Declared outside a function and not in some other code block
+                    --> Variables declared outside a function  are available within the 
+                        function as well as inside any functions or other code blocks inside that function
+                    --> Local variables ovveride global variables
+                        a) If you create a variable with the same name as a global variable inside a function, that 
+                           variable's value will be used whenever you refer to that variable name within the scope of that
+                           particular function  
+                        b) Same is true for parameter names. If a paramter has the same name as a global variable, 
+                           the value of the parameter will e used
+                    --> If you want to use a global variable, decalre it at the top of the JS file    */ 
+
+let x = "global";
+function doingStuff() {
+    let x = "local";
+    console.log(x);
+}
+doingStuff();       // Outputs: local
+console.log(x);     // Outputs: global
+
+
+/* Immediately Invoked Function Expression (IIFE) --> A way of expressing a function so that it gets invoked immediately
+                                                  --> It is anonymous, it doesn't have a name, and it is self-executing  
+                                                  --> Function is surrounded by parantheses
+                                                  --> (); executes the unamed funciton and must be done immediately following
+                                                      a function declaration
+                                                  --> Possible to combine IIFE with arrow functions
+                                           
+Format:     (function () {
+                console.log("IIFE!");
+            })();                   */
+
+
+// Practice Exercise 6.5
+ let variable1 = "1000";
+
+ (function () {
+    let variable1 = "2000";
+    console.log(variable1);
+ })();                          // Outputs: 2000
+
+ let result1 = (function () {
+    let variable1 = "Valadi";
+    return variable1;
+ })(); 
+
+ console.log(result1);
+ console.log(variable1);
+
+(function (variable1) {
+    console.log(`My name is ${variable1}`);
+})("Valadi");
+
+
+
