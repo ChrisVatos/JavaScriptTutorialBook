@@ -39,7 +39,63 @@ console.log(`Hi, my name is ${luna.dogName}, a ${luna.age} year old ${luna.breed
            --> Convention to start class names with a capital letter
            --> Classes are useful because we need to do a lot less typing to create x amount of dog objects
                if we have a dog class
-               --> Without a dog class, we will have to specify the propertie names each time, leaving room for error and typos  */
+               --> Without a dog class, we will have to specify the propertie names each time, leaving room for errors  */
+
+
+/* Constructors --> Constructor method is a special method we use to initialize objects with our class blueprint
+                --> Only one constructor in a class
+                --> Constructor contains properties we will set when initiating the class
+                --> "new" keyword tells JS to look for the constructor in the desginated class and create a new object
+                -->  The constructor gets called and returns an instance of the object with the specified properties 
+                --> This returned object can be stored in a  variable
+
+*/
+        
+class Person {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+}
+
+let person = new Person("Chris", "Vatos");  
+console.log("Hi", person.firstName);    // Outputs: Hi Chris
+
+let person2 = new Person("Valadi");
+console.log("Hi", person2.firstName, person2.lastName);   // Outsputs: Hi Valadi udefined (Doesn't crash)
+
+// Also possible to specify default values in constructors
+
+class PersonUnknown {
+    constructor(firstName, lastName = "Doe") {   // If no lastName argument passed in, lastName property of object is "Doe"
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+}
+
+let person3 = new PersonUnknown("George");
+console.log("Hi", person3.firstName, person3.lastName);
+
+
+// Practice Exercise 7.1
+
+class PersonExercise {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+}
+
+let Sadek = new PersonExercise("Sadek", "Mahmodd");
+let Nicolas = new PersonExercise("Nicolas", "Paccico");
+
+console.log("Hello", Sadek.firstName, Sadek.lastName)
+console.log("Hello", Nicolas.firstName, Nicolas.lastName)
+
+
+
+
+
 
 
 
