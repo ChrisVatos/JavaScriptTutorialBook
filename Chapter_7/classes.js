@@ -167,8 +167,8 @@ console.log(p.firstName);       // Outputs: undefined
                        --> Setter takes a parameter and assigns the new value tot he property   */
 
  class Person6 {
-  #firstname;
-  #lastname;
+  #firstname;   // Use # before property
+  #lastname;    // Use # before property
   constructor(firstname, lastname) {
     this.#firstname = firstname;
     this.#lastname = lastname;
@@ -194,7 +194,94 @@ console.log(p2.firstname);      // Do not put () after the getter or else an err
 
 //Using Setter
 p2.firstname = "Adnane";        // Adnane is like the parameter here
-console.log(p2.firstname);
+console.log(p2.firstname);      // Outputs: Adnana
+
+
+/* Inheritance --> One of the key concepts in OOP
+               --> Concept that classes can have child classes that inherit properties and methods from the parent class
+               --> The "extends" keyword specifies that a certain class is a child class of some other class
+               --> The "super" keyword calls the constructor from the parent and makes sure that the fields 
+                   from the parent are set as well and that the methods are available without having to do 
+                   anything else: they are automatically inherited
+               --> Calling super() is mandatory if you are in a class that is inherting from another class 
+               --> Getters and setter are also inherited in the child class    */
+
+class Vehicle {
+  constructor(color, currentSpeed, maxSpeed) {
+    this.color = color;
+    this.currentSpeed = currentSpeed;
+    this.maxSpeed = maxSpeed;
+  }
+  move() {
+    console.log("moving at", this.currentSpeed);
+  }
+  accelerate(amount) {
+    this.currentSpeed += amount;
+  }
+}
+
+class Motorcycle extends Vehicle {
+    constructor(color, currentSpeed, maxSpeed, fuel) {
+      super(color, currentSpeed, maxSpeed);     // Calls the constructor from the parent
+      this.fuel = fuel;
+    }
+    doWheelie() {
+      console.log("Driving on one wheel!");
+     }
+}
+
+let motor = new Motorcycle("Black", 0, 250, "gasoline");
+console.log(motor.color);   // Outputs: Black
+motor.accelerate(50);       // Vehicle method
+motor.move();               // Vehicle method
+
+
+/* Prototypes --> Mechanism that makes it possible to have objects in JS
+              --> When nothing is specified when creating a class, the objects inherit from the Object.prototype prototype
+                   --> Object.prototype prototype is the base object that is always on top of the inheritance tree and 
+                   therefore always present in our objects
+              --> There is a "prototype" property available on all classes and it is always: className.prototype
+                   --> The "prototype" property holds all the properties and methods of an object    */
+
+let p9 = new Person("George", "Vatos");
+
+// Adding a method to a class using the prototype property
+Person.prototype.introduce =  function() {      // Use className.prototype to add method
+    console.log("Hi, I'm " + this.firstName);
+}
+p9.introduce();     //Outputs: Hi, I'm George
+
+
+// Adding a property to a class using the prototype proeprty
+Person.prototype.favoriteColor = "green";       // Use className.prototype to add fields as well
+console.log(p9.favoriteColor);
+
+
+// Practice Exercise 7.3
+class Animal {
+    constructor(species, sound) {
+        this.species = species;
+        this.sound = sound;
+    }
+
+    makeNoise() {
+        console.log(`The ${this.species} goes ${this.sound}`);
+    }
+}
+
+let pig = new Animal("pig", "oink");
+let cow = new Animal("cow", "moooo");
+
+Animal.prototype.giveBirth = function() {
+    console.log("Looks like I'm having a baby " + this.species);
+}
+
+console.log(pig);
+console.log(cow);
+pig.makeNoise();
+cow.makeNoise();
+pig.giveBirth();
+cow.giveBirth();
 
 
 
