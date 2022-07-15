@@ -93,6 +93,122 @@ console.log("Hello", Sadek.firstName, Sadek.lastName)
 console.log("Hello", Nicolas.firstName, Nicolas.lastName)
 
 
+/* Methods --> In a class, we can specify functions that make the object do certain things using 
+               the object's own properties  (Syntax: this.propertyName)
+           --> Functions on a class are called methods
+           --> When defining these methods, we don't use the function keyword. We start directly with the name 
+           --> Methods can take parameters and return results     */
+
+class PersonWithMethod {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    greet() {
+        console.log("Hi there, I'm ", this.firstName);
+    }
+
+    compliment(object, name) {
+        return ("That's a wonderful " + object + " " + name)
+    }
+}
+
+let lambro = new PersonWithMethod("Lambro", "Vatos");
+lambro.greet();
+let compliment = lambro.compliment("Scooter", "Paul");
+console.log(compliment);
+
+
+// Practice Exercise 7.2
+class PersonExercise2 {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    fullName() {
+        return (this.firstName + this.lastName);
+    }
+}
+
+let Dimitri = new PersonExercise2("Dimitri", "Walter");
+let Theo = new PersonExercise2("Theo", "Tsinas");
+
+console.log(Dimitri.fullName());
+console.log(Theo.fullName());
+
+
+/* Properties --> Also called fields
+              --> Hold the data of the class
+              --> Not desirable to provide direct access to our class' properties
+              --> To add properties to a class that aren't accessible from the outside, prefix them with #  */ 
+
+class Person5 {
+    #firstname;
+    #lastname;
+        constructor(firstname, lastname) {
+        this.#firstname = firstname;
+        this.#lastname = lastname;
+    }
+}
+
+let p = new Person5("Maria", "Saga");
+console.log(p.firstName);       // Outputs: undefined
+
+
+/* Getters and Setters --> Used to get data fields from the class and set data fields on the class
+                       --> Often called "accessors"
+                       --> They look like functins because of the () but they are not
+                       --> They start with the "get" and "set" keywords
+                       --> Good practice to make properties as private as possible and provide access to them 
+                           using getters and setters
+                       --> Getter returns the value of the property
+                       --> Setter takes a parameter and assigns the new value tot he property   */
+
+ class Person6 {
+  #firstname;
+  #lastname;
+  constructor(firstname, lastname) {
+    this.#firstname = firstname;
+    this.#lastname = lastname;
+  }
+  get firstname() {
+    return this.#firstname;
+  }
+  set firstname(firstname) {
+    this.#firstname = firstname;
+  }
+  get lastname() {
+    return this.#lastname;
+  }
+  set lastname(lastname) {
+    this.#lastname = lastname;
+  }
+}
+
+let p2 = new Person6("Maria", "Saga");
+
+// Using Getter
+console.log(p2.firstname);      // Do not put () after the getter or else an error will be raised. Getter is not a function
+
+//Using Setter
+p2.firstname = "Adnane";        // Adnane is like the parameter here
+console.log(p2.firstname);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
