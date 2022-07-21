@@ -97,6 +97,31 @@ console.log(`The natural logarithm of ${power1} is ${log}`);
 
 
 // Practice Exercise 8.6
+let pi = Math.PI;
+console.log(pi);
+
+let number = 5.7;
+let ceil = Math.ceil(number);
+let floor = Math.floor(number);
+let round = Math.round(number);
+console.log("Ceiling:", ceil, "Floor:", floor, "Round:", round);
+
+let random = Math.floor(Math.random() * 11)
+console.log(random);
+
+let random1 = Math.floor(Math.random() * 10) + 1
+console.log(random1);
+
+let random100 = Math.floor(Math.random() * 100) + 1
+console.log(random100);
+
+function randomFunction(min, max) {
+    return  Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+for(let i = 0; i < 100; i ++) {
+    console.log(randomFunction(5, 20));
+}
 
 
 
