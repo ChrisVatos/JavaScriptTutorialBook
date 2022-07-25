@@ -31,4 +31,10 @@ Ex:
     <img width="750" height="500" src="DOM.jpg">
 </p>
 
+<p align="center">
+    Tree structure of the DOM of a very basic web page
+</p>
+
+
+
 
