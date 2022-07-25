@@ -29,3 +29,25 @@
 
     → Elements can only be closed if all inner elements have been closed
 
+→ Different elements represent different pieces of layout
+
+    → p represents paragraphs
+    → h1 represents a big heading
+    → h2 is a smaller title
+
+→ There are three major building elements of every HTML page:
+
+    → 1) HTML element
+    → 2) head element
+    → 3) body element
+
+### 1) HTML element
+
+→ All the HTML takes place in the HTML element
+
+→ Only have one of these in an HTML page
+
+→ It is the outer element; all other elements are housed in it
+
+→ Contains the other two top level elemens; head and body (Order: head comes before body)
+
