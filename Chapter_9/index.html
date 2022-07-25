@@ -1,13 +1,24 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html>
+
     <head>
-        <title>Tab in the browser</title>
+        <script type = "text/javascript"src = "https://livejs.com/live.js"></script>
     </head>
-    
-    <body>
-        <p>Hello web!</p>
-    </body>
-    
-    <script type = "text/javascript"  src  = "chapter_projects.js" src = "https://livejs.com/live.js"></script>
-    
+
+    <div class="output"> 
+
+    </div>
+
+
+    <script>
+        let output = document.querySelector(".output");     // Select the first element with class = "output"
+        output.textContent = "HELLO, my name is Valadi";    // Update the text in this element 
+        output.classList.add("red");                        // Add another class to this element
+        output.id = "tester";                               // Add an ID attribute to this element
+        output.style.backgroundColor = "red";               // Change the background color of this element
+        let url = document.URL;                             // Grab the URL of the webpage
+        output.textContent = url;                           // Update the text in this element 
+        console.log(output);
+    </script>
+
 </html>

@@ -52,12 +52,10 @@ Ex:
 
 → To select page elements to use within your JavaScript code:
 
-    → document.querySelector(): Returns the first element within the document that matches the specified selector
+    → document.querySelector(x): Returns the first element within the document that matches the specified selector
 
-    → document.querySelectorAll(): Returns all elements within the document that match the specified selector
+    → document.querySelectorAll(x): Returns all elements within the document that match the specified selector
 
-        → Will return a static NodeList conataining a list of the document's elements that match the specified group of selectors”
+        → Will return a static NodeList conataining a list of elements that match the specified group of selectors”
 
-        
-
-→ Both of these can be used to select page elements either by tag name, ID, or class.
+→ Both of these can be used to select page elements by x where x is tag name, ID, or class.
