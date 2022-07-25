@@ -83,6 +83,8 @@
 
     → Divisions (Used as a container for other style or sections and can easily be ised for special layouts) <div></div> 
 
+    ![Drag Racing](cheat_sheet.jpg)
+
  
 
 
