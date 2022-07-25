@@ -4,3 +4,9 @@
 
 --> The Browser Object Model (BOM) holds all the methods and properties for JS to interact with the browser
 
+
+## HTML Crash Course
+
+--> HTML is a language that shapes the content of web pages
+
+--> 
