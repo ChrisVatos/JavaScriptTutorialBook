@@ -10,7 +10,8 @@
     console.log(`${property}: ${document[window]}`);
 }
 
-5) ```“<!doctype html>
+5) ```
+<!doctype html>
 <html>
 <head>
     <title>JS Tester</title>
