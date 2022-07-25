@@ -1,4 +1,4 @@
-→ The Document Object Model (DOM) grabs an HTML page and turns it into a logical tree.
+→# The Document Object Model (DOM) grabs an HTML page and turns it into a logical tree.
 
     → DOM contains all the HTML elements on a page.
 
@@ -49,5 +49,42 @@
 
 → It is the outer element; all other elements are housed in it
 
-→ Contains the other two top level elemens; head and body (Order: head comes before body)
+→ Contains the other two top level elemens; head and body 
+
+### 2) head element
+
+→ Arrange a lot of things that are meant for the browser and not for the user
+
+→ Contains certain metada:
+
+    → JS script <script></script> and CSS stylesheets <style></style>
+
+    → <title> </title> defines the title of the browser
+
+### 3) body element
+
+→ Contains the content that will appear on the web page
+
+→ One body element in the HTML element
+
+→ We can come across a lot of elements in the body element: 
+
+    → Headings <h1> </h1>
+
+    → Paragraphs <p> </p>
+
+    → Images <img>
+
+    → Lists <li> </li>
+
+    → Links <a></a> 
+
+    → Buttons <button></button>
+
+    → Divisions (Used as a container for other style or sections and can easily be ised for special layouts) <div></div> 
+
+ 
+
+
+
 
