@@ -83,7 +83,9 @@
 
     → Divisions (Used as a container for other style or sections and can easily be ised for special layouts) <div></div> 
 
-   <img align = "center" src="cheat_sheet.jpg" />
+    <p align="center">
+        <img width="460" height="300" src="cheat_sheet.jpg">
+    </p>
 
  
 
