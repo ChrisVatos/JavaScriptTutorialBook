@@ -8,7 +8,7 @@
 
        → When a web page is loaded, the browser creates a Document Object Model of the page
 
-        
+→ The DOM is a child object of the BOM
 
 Ex: 
 ```
@@ -32,9 +32,28 @@ Ex:
 </p>
 
 <p align="center">
-    Tree structure of the DOM of a very basic web page
+   Figure 1: Tree structure of the DOM of a very basic web page
 </p>
 
+→ This type of logical tree and a bunch of extra properties make up a web page's DOM
+
+## Additional DOM Properties
+
+→ To inspect a web page's DOM:
+
+    → console.dir(document)
+
+→ The DOM contains all the HTML elements of a web page
+
+→ These basics of DOM elements, combined with some knowledge of manipulating and exploring the DOM, will open up so many possibilities
 
 
+## Selecting Page Elements
 
+→ To select page elements to use within your JavaScript code:
+
+    → document.querySelector(): Return the first element within the document that matches the specified selector
+
+    → document.querySelectorAll(): Returns all elements within the document that match the specified selector
+
+→ Both of these can be used to select page elements either by tag name, ID, or class.
