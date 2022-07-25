@@ -7,7 +7,7 @@
 → The Browser Object Model (BOM) holds all the methods and properties for JS to interact with the browser
 
 
-## HTML Crash Course
+# HTML Crash Course
 
 → HTML is a language that shapes the content of web pages
 
@@ -15,7 +15,7 @@
     
     → Elements contain a tag and attributes
 
-### HTML Elements
+## HTML Elements
 
 → Elements are words between < angle brackets >
 → Any element that gets opened needs to be close
@@ -86,3 +86,20 @@
 <p align="center">
     <img width="750" height="500" src="cheat_sheet.jpg">
 </p>
+
+
+## HTML Attributes
+
+→ Attributes influence the element they are specified on and provide additional information about elements
+
+→ Attributes are always specified in the opening tag
+
+→ Attributes usually come in name/value pairs like: name="value"
+
+
+
+<p align="center">
+    <img width="750" height="500" src="attributes.jpg">
+</p>
+
+
