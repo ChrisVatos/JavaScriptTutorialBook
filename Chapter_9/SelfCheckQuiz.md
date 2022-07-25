@@ -10,7 +10,8 @@
     console.log(`${property}: ${document[window]}`);
 }
 
-5) ```
+5) 
+```
 <!doctype html>
 <html>
 <head>
