@@ -11,7 +11,8 @@
         
 
 Ex: 
-`<html>
+```
+<html>
   <head>
     <title>Tab in the browser</title>
   </head>
@@ -22,7 +23,9 @@ Ex:
       <a href="https://google.com">Here's a link!</a>
     </div>
   </body>
-</html>`
+</html>
+
+```
 
 <p align="center">
     <img width="750" height="500" src="DOM.jpg">
