@@ -56,7 +56,7 @@ Ex:
 
     → document.querySelectorAll(): Returns all elements within the document that match the specified selector
 
-        → Will return a static NodeList, which represents a list of the document's elements that match the specified group of selectors”
+        → Will return a static NodeList conataining a list of the document's elements that match the specified group of selectors”
 
         
 
