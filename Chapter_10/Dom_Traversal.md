@@ -44,22 +44,22 @@
 
 → To traverse the DOM using children property: 
 
-    → document.body.children.forest.children.tree2.children.shrubbery.children.treasure
+    → document.body.children.forest.children.tree2.children.shrubbery.children.treasure;
     → Note: On every element we select, we have to select the children again (.children)
 
 → To traverse the DOM using childNodes property: 
 
-    → document.body.childNodes[3].childNodes[3].childNodes[1].childNodes[1]
+    → document.body.childNodes[3].childNodes[3].childNodes[1].childNodes[1];
 
 → We can use the parentElement property to move back up and return the parent HTML element
 
-    → document.body.children.forest.children.tree2.parentElement    
+    → document.body.children.forest.children.tree2.parentElement;
 
 → We can use previousElementSibling and nextElementSibling to move sideways and return the next/previous HTML element
 
-    → We can select tree2 likewise:     document.body.children.forest.children.tree2
-    → We can get to tree1 likewise:     document.body.childreen.forest.children.tree2.previousElementSibling
-    → We can go back to tree2:          document.body.childreen.forest.children.tree1.nextElementSibling
+    → We can select tree2 likewise:     document.body.children.forest.children.tree2;
+    → We can get to tree1 likewise:     document.body.childreen.forest.children.tree2.previousElementSibling;
+    → We can go back to tree2:          document.body.childreen.forest.children.tree1.nextElementSibling;
 
 → previousSibling/nextSibling properties will return the next node of any type
 
@@ -84,7 +84,7 @@
 
 → To access the p element: 
 
-    → document.body.children.greeting
+    → document.body.children.greeting;
 
     → We can now manipulate the properties of the element, and the element itself
 
@@ -95,12 +95,12 @@
 
 → To change the innerText between the opening and closing tags: 
 
-    → document.body.children.greeting.innerText = "Bye"
+    → document.body.children.greeting.innerText = "Bye";
 
 → However, if there is any HTML inside the element you need to select, or if you want to add HTML, you cannot use this method
 
     → document.body.children.greeting.innerText = "<p>Bye!</p>";     will yield <p>Bye!</p>
-    
+
 
 ### Changing innerHTML (Can interpret HTML elements)
 
