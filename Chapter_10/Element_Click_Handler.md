@@ -13,13 +13,13 @@
         function stop() {
             alert("Ouch! Stop it.")
         }
-      </script>
+    </script>
     <div id="one" onclick = "stop()">Don't click here!</div>
   </body>
 </html>”
 ```
 → HTML pages can: 
 
-    1) Have script tags as above and contain JS code directly
-    2) Refer to script that get loaded into the page
+    1) Have script tags and contain JS code directly
+    2) Refer to scripts that get loaded into the page
 
