@@ -55,7 +55,9 @@
     
 → Above returns:
 
-    → HTMLCollection(3) [div#one.example, div#two.example, div#three.something, one: div#one.example, two: div#two.example, three: div#three.something]
+    → HTMLCollection(3) [div#one.example, div#two.example, div#three.something, one: div#one.example,
+    
+     two: div#two.example, three: div#three.something]
 
 → # specifies the ID value and .  specifies the class name 
 
