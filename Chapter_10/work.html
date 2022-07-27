@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <h1>Welcome page</h1>
-        <p id="greeting">
-            Hi!
-        </p>
-    </body>
+  <body>
+    <h1>Just an example</h1>
+    <div id="one" class="example">Hi!</div>
+    <div id="two" class="example">Hi!</div>
+    <div id="three" class="something">Hi!</div>
+  </body>
+  <script>
+    console.log(document.getElementsByTagName("div"));
+    console.log(document.getElementsByTagName("div").item(1));
+    console.log(document.getElementsByTagName("div").namedItem("one"));
+  </script>
 </html>

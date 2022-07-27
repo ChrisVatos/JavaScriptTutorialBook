@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Practice selecting elements by tag name</title>
+    </head>
+
+    <body>
+        <h1>Welcome to DOM Traversal</h1>
+        <h2>Author: Chris Vatos</h2>
+        <h2 id = "location">Location: Montreal</h2>
+        <h2>Date: 2022/07/27</h2>
+    </body>
+
+    <script> 
+        let arrayOfH2 = document.getElementsByTagName("h2");
+        console.log(arrayOfH2.item(1));
+        console.log(arrayOfH2[1]);
+    </script>
+</html>
