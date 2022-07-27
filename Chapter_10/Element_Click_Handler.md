@@ -22,4 +22,5 @@
 
     1) Have script tags and contain JS code directly
     2) Refer to scripts that get loaded into the page
+    Note: When calling the stop() function,it must be surrounded by " "
 
