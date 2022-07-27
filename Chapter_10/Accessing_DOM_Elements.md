@@ -70,5 +70,33 @@
     → document.getElementsByTagName("div").namedItem("one");
 
 
+## Accessing Elements by Class Name
+
+→ We can grab elements by class name using the getElementsByClassName() method
+
+→ We get an array as a result because there could be more than one element with the same class name
+    
+    → It will be a collection of HTML elements, or HTMLCollection, which is a special JavaScript object
+
+→ To select all elements with class name "example"
+
+    → document.getElementsByClassName("example");
+
+→ Above returns:
+
+    → HTMLCollection(3) [div#one.example, div#two.example, one: div#one.example, two: div#two.example
+    
+## Accessing Elements with a CSS Selector
+
+→ We can also access elements using a CSS selector using querySelector() and querySelectorAll(). We then give the CSS selector as an argument, and this will only return the ones that satisfy the CSS selector
+
+→ For a comprehensive list of CSS selectors, see here. [Link text Here](https://www.w3schools.com/cssref/css_selectors.asp)
+    
+
+
+
+
+
+
 
    
