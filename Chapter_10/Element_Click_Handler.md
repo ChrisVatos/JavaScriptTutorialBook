@@ -4,6 +4,7 @@
     
     → This is because a JavaScript function can be connected to an HTML element
 
+→ Example:
 ```
 <!DOCTYPE html>
 <html>
