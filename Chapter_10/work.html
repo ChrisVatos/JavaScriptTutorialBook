@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
+
   <body>
-    <h1>Just an example</h1>
-    <div id="one" class="example">Hi!</div>
-    <div id="two" class="example">Hi!</div>
-    <div id="three" class="something">Hi!</div>
+
+    <script>
+        function stop() {
+            alert("Ouch! Stop it.")
+        }
+      </script>
+
+    <div id="one" onclick = "stop()">Don't click here!</div>
+
   </body>
-  <script>
-    console.log(document.getElementsByTagName("div"));
-    console.log(document.getElementsByTagName("div").item(1));
-    console.log(document.getElementsByTagName("div").namedItem("one"));
-  </script>
-</html>
+  
+</html>”
+

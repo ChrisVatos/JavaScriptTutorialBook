@@ -91,7 +91,38 @@
 → We can also access elements using a CSS selector using querySelector() and querySelectorAll(). We then give the CSS selector as an argument, and this will only return the ones that satisfy the CSS selector
 
 → For a comprehensive list of CSS selectors, see here. [Link text Here](https://www.w3schools.com/cssref/css_selectors.asp)
+
+Ex: p.example → select all p elements with class = "example"
+Ex: #green → select the element with the id = "green"
+Ex: .outer .inner → select all elements with class = "inner" that are desendants of an element with class = "outer"
+
+### Using querySelector()
+
+→ Selects the first element that matches the query
+
+→ To return the first div:
+
+    → document.querySelector("div");    returns <div id="one" class="example">Hi!</div>
+
+→ To return the first element with class = "something"
+
+    → document.querySelector(".something");   returns <div id="three" class="something">Hi!</div>
+
+→ With this method, you can only use valid CSS selectors: elements, classes, and IDs
+
+### Using querySelectorAll()
+
+→ Selects all the elements that match the query
+
+    → Returns a NodeList object
     
+→ Using the item() method we can get them by index
+
+→ To select all the div elements;
+
+    → document.querySelectorAll("div");     returns NodeList(3) [div#one.example, div#two.example, div#three.something]
+
+
 
 
 
