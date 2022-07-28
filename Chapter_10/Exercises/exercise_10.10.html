@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Complete JavaScript Course</title>
+        <style>
+        </style>
+    </head>
+
+    <body>
+        <div id="message">Complete JavaScript Course</div>
+        <div>
+            <input type="text" id="addItem">
+            <input type="button" id="addNew" value="Add to List"> 
+        </div>
+        <div id="output">
+            <h1>Shopping List</h1>
+            <ol id="sList"></ol>
+        </div>
+
+        <script>
+            document.querySelector("#addNew").addEventListener("click", addOne);
+
+            function addOne() {
+                let item = document.createElement("li");
+                let input = document.querySelector("#addItem").value;   // .value to get the value to an input box
+                item.appendChild(document.createTextNode(input));
+                document.querySelector("#sList").appendChild(item);
+                document.querySelector("#addItem").value = "";
+            }
+
+        </script>
+    </body>
+</html>
