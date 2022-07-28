@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Complete JavaScript Course</title>
+    </head>
+
+    <body>
+        <div id="message"></div>
+        <div id="output"></div>
+        <button id = "add" onclick = "add()" style = "border: 20 px; color: blueviolet; background-color: yellow">Add Person</button>
+
+        <script>
+            const names = ["Sadek", "Nicolas", "Theo", "Dimitry", "Zander", "Lauren"];
+            const message = document.querySelector("#message");
+            const output = document.querySelector("#output");
+
+            (function build() {
+                output.innerHTML = "<h1>My Friends Table</h1>";
+                const table = document.createElement("table");
+                output.appendChild(table);
+
+                for(let i = 0; i < names.length; i++) {
+
+                    let row = table.insertRow();
+                    row.classList.add("box");
+                    row.setAttribute("data-row", i + 1);
+                    row.setAttribute("data-name", names[i]);
+                    row.setAttribute("onclick", "display(this)");
+
+
+                    let cellName = row.insertCell(0);
+                    cellName.innerText = names[i];
+                    
+                    let cellID = row.insertCell(1);
+                    cellID.innerText = i + 1;
+                }
+
+                console.log(document.querySelectorAll("tr"));
+            })()
+            
+            function add() {
+                let row = document.querySelector("table").insertRow();
+                let name = prompt("Name");
+                let rowNumber = document.querySelectorAll("tr").length;
+                row.insertCell().innerText = name;
+                row.insertCell().innerText = rowNumber;
+                row.setAttribute("data-row", rowNumber);
+                row.setAttribute("data-name", name);
+                row.setAttribute("onclick", "display(this)");
+            }
+
+            function display(element) {
+                let name = element.getAttribute("data-name");
+                let rowNumber = element.getAttribute("data-row");
+                message.innerHTML = `<h2>${name} is in row #${rowNumber}</h2>`;
+            }
+        </script>
+
+    </body>
+</html>
+
+

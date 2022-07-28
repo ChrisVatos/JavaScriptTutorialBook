@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Manipulating HTML Elements
+        </title>
+    </head>
+
+    <body>
+        <h1>Welcome to little interactive web page!</h1>
+        <h2 id = "magic">Do you see me?</h2>
+        <button onclick = "hide()">Click to Hide</button>
+    </body>
+
+    <script>
+        function hide() {
+            let elementToHide = document.querySelector("#magic");
+            
+            if(elementToHide.style.display === "none") {
+                elementToHide.style.display = "block";
+            } else {
+                elementToHide.style.display = "none";
+            }
+        }
+    </script>
+</html>

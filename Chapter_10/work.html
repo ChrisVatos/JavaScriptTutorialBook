@@ -1,12 +1,26 @@
-<!DOCTYPE html>
+“<!DOCTYPE html>
 <html>
   <body>
     <script>
-      function reveal(el){
-        console.log(el.parentElement);
+      function changeAttr(){
+        let el = document.getElementById("shape");
+        el.setAttribute("style", "background-color:red;border:1px solid black");
+        el.setAttribute("id", "new");
+        el.setAttribute("class", "circle");
       }
     </script>
-    <button onclick="reveal(this)">Click here!</button>
+    <style>
+      div {
+        height: 100px;
+        width: 100px;
+        background-color: yellow;
+      }
+      .circle {
+        border-radius: 50%;
+      }
+    </style>
+    <div id="shape" class="square"></div>
+    
+    <button onclick="changeAttr()">Change attributes...</button>
   </body>
 </html>
-
