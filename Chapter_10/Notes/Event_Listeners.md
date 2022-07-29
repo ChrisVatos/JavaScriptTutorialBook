@@ -42,11 +42,12 @@
             → "onchange" becomes "change"
 
 
-→ It is common practice to add the even listeners on the loading of the webpage like so:
+→ It is common practice to add the event listeners as so (onload can be replaced by any event listener):
 
-    window.onload = function() {
+    nameOfElemen.onload = function() {
         // for example adding event listeners to elements
         // initializng the web page
     }
+
 
     
