@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Complete JavaScript Course</title>
+    </head>
+    <body>
+        <div id="message">Complete JavaScript Course</div>
+        <div>
+            <input type="text" id="addFriend">
+            <input type="button" id="addNew" value="Add Friend">
+        </div>
+        <table id="output"></table>
+
+        <script>
+            let names = ["John", "Mary", "Claude", "Theo"];
+            document.querySelector("#addNew").addEventListener("click", addPerson);
+
+            (function build() {
+                for(let i = 0; i < names.length; i++) {
+                    let row = document.createElement("tr");
+                    document.querySelector("#output").appendChild(row);
+
+                    let indexCol = row.insertCell(0);
+                    row.appendChild(indexCol);
+                    indexCol.innerText = i + 1;
+
+                    let name = row.insertCell(1);
+                    row.appendChild(name);
+                    name.innerText = names[i];
+
+                    let count = row.insertCell(2);
+                    row.appendChild(count);
+                    count.innerText = 0;
+                }  
+            })();
+
+            function addPerson() {
+                let name = document.querySelector("#addFriend").value;
+              
+                let row = document.createElement("tr");
+                document.querySelector("table").appendChild(row);
+
+                let indexCol = row.insertCell(0);
+                row.appendChild(indexCol);
+                indexCol.innerText = document.querySelectorAll("tr").length;
+
+                let nameRow = row.insertCell(1);
+                row.appendChild(nameRow);
+                nameRow.innerText = name;
+
+                let count = row.insertCell(2);
+                row.appendChild(count);
+                count.innerText = 0;
+                
+                document.querySelector("#addFriend").value = " ";
+
+                row.addEventListener("click", function() {
+                    this.children[2].innerText++;
+                });
+            }
+
+          
+                let rows = document.querySelectorAll("tr");
+                rows.forEach((el) => el.addEventListener("click", function() {
+                    el.children[2].innerText++;
+                }));
+        </script>
+    </body>
+</html>
