@@ -6,10 +6,6 @@
 
 3) Hello World
 
-4) three and one 
+4) three and one, two, three
 
-             two
-
-             three
-
-5) btn.removeEventListener("click",myFun)
+5) btn.removeEventListener("click", myFun)

@@ -13,57 +13,46 @@
 
         <script>
             let names = ["John", "Mary", "Claude", "Theo"];
-            document.querySelector("#addNew").addEventListener("click", addPerson);
+            let message = document.querySelector("#message");
+            let newPersonName = document.querySelector("#addFriend");
+            let button = document.querySelector("#addNew");
+            let table = document.querySelector("#output");
+            window.onload = build;
 
-            (function build() {
-                for(let i = 0; i < names.length; i++) {
-                    let row = document.createElement("tr");
-                    document.querySelector("#output").appendChild(row);
-
-                    let indexCol = row.insertCell(0);
-                    row.appendChild(indexCol);
-                    indexCol.innerText = i + 1;
-
-                    let name = row.insertCell(1);
-                    row.appendChild(name);
-                    name.innerText = names[i];
-
-                    let count = row.insertCell(2);
-                    row.appendChild(count);
-                    count.innerText = 0;
-                }  
-            })();
-
-            function addPerson() {
-                let name = document.querySelector("#addFriend").value;
-              
-                let row = document.createElement("tr");
-                document.querySelector("table").appendChild(row);
-
-                let indexCol = row.insertCell(0);
-                row.appendChild(indexCol);
-                indexCol.innerText = document.querySelectorAll("tr").length;
-
-                let nameRow = row.insertCell(1);
-                row.appendChild(nameRow);
-                nameRow.innerText = name;
-
-                let count = row.insertCell(2);
-                row.appendChild(count);
-                count.innerText = 0;
-                
-                document.querySelector("#addFriend").value = " ";
-
-                row.addEventListener("click", function() {
-                    this.children[2].innerText++;
-                });
+            button.onclick = function() {
+                names.push(newPersonName.value);
+                addToPage(names.length, newPersonName.value, 0);
+                newPersonName.value = "";
             }
 
-          
-                let rows = document.querySelectorAll("tr");
-                rows.forEach((el) => el.addEventListener("click", function() {
-                    el.children[2].innerText++;
-                }));
+            function build() {
+                for(let i = 0; i < names.length; i++) {
+                    addToPage(i + 1, names[i], 0);
+                }
+            }
+
+            function addToPage(index, name, count) {
+                let row = document.createElement("tr");
+                table.append(row);
+
+                let indexCell = row.insertCell(0);
+                row.append(indexCell);
+                indexCell.textContent = index;
+
+                let nameCell = row.insertCell(1);
+                nameCell.textContent = name;
+                row.append(nameCell);
+                
+                let countCell = row.insertCell(2);
+                row.append(countCell);
+                countCell.textContent = count;
+
+                row.onclick = function() {
+                    row.children[2].innerText++;
+                }
+            }
+
+                
         </script>
     </body>
 </html>
