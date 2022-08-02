@@ -29,7 +29,7 @@
 
 ## Specifying events with JS
 
-→ Syntax: document.getElementById("unique").onclick = function() { magic() ;};
+→ Syntax: ``` document.getElementById("unique").onclick = function() { magic() ;}; ```
 
-fcf
+
 
