@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <title>JS Tester</title>
+    </head>
+
+    <body>
+        <div class="output"></div>
+        <input type="text" name="message" placeholder="Your Message">
+        <button class="btn1">Button 1</button>
+        <button class="btn2">Button 2</button>
+        <div>
+            <button class="btn3">Log</button>
+        </div>
+
+        <script>
+            let output = document.querySelector(".output");
+            let input = document.querySelector("input");
+            let button1 = document.querySelector(".btn1");
+            let button2 = document.querySelector(".btn2");
+            let logBTN = document.querySelector(".btn3");
+
+            let log = [];
+
+            function getEventInfo() {
+                let ev = event.target;      // Retrieves element that triggered the event
+                console.dir(ev);            // Logs to the console the properties of the element that triggered the event
+                output.innerText = input.value;
+
+                let eventInfo = {
+                    Input: input.value,
+                    EventType: ev.type,
+                    Class: ev.classList[0],
+                    Tag: ev.tagName
+                }
+
+                log.push(eventInfo);
+                input.value = "";
+                input.placeholder = "Your Message";
+            }
+
+            button1.addEventListener("click", getEventInfo);
+            button2.addEventListener("click", getEventInfo);
+            logBTN.addEventListener("click", function() {console.log(log)});
+        </script>
+    </body>
+
+</html>
+
+

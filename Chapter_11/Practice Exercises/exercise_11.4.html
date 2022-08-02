@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Practice Exercise 1.4
+        </title>
+    </head>
+
+    <body>
+        <div class = "greeting">My name is Valadi</div>
+    </body>
+
+    <script>
+        let greeting = document.querySelector(".greeting");
+        greeting.innerText = "hello world";
+        greeting.style.border = "thin solid black";
+        greeting.style.height = "200px";
+        greeting.style.width = "200px";
+
+        function changeColor(color, element) {
+            element.style.backgroundColor = color;
+            console.log(`${color} on ${event.type}`);   // event.type retrievs the mouse event that triggered the function call    
+        }
+
+        greeting.addEventListener("mousedown", function() { changeColor("green", this)});
+        greeting.addEventListener("mouseover", function() { changeColor("red", this)});
+        greeting.addEventListener("mouseleave", function() { changeColor("yellow", this)});
+        greeting.addEventListener("mouseup", function() { changeColor("blue", this)});
+
+      
+
+    </script>
+</html>
