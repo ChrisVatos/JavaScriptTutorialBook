@@ -31,3 +31,5 @@
 
 → Syntax: document.getElementById("unique").onclick = function() { magic() ;};
 
+fcf
+
