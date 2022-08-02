@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>
+            Practice Exercise 1.2
+        </title>
+    </head>
+
+    <body>
+        <div id = "green">Green</div>
+        <div id = "purple">Purple</div>
+        <div id = "blue">Blue</div>
+        <div id = "red">Red</div>
+        <div id = "turquoise">Turquoise</div>
+    </body>
+
+    <script>
+        let divs = document.querySelectorAll("div");
+        console.log(divs);
+
+        for(let i = 0; i < divs.length; i++) {
+            divs[i].addEventListener("click", function () {
+                document.querySelector("body").style.backgroundColor = this.id;
+            });
+        }
+    </script>
+</html>

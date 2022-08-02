@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice Exercise 1.1</title>
+    </head>
+
+    <body>
+        HELLOOO, my name is Chris
+    </body>
+
+    <script>
+        let darkMode = false;
+
+        window.onclick = function() {
+            console.log(`Darkmode: ${!darkMode}`);
+
+            if(darkMode) {
+                document.querySelector("body").style.backgroundColor = "white";
+                document.querySelector("body").style.color = "black";
+                darkMode = !darkMode;
+            } else {
+                document.querySelector("body").style.backgroundColor= "black";
+                document.querySelector("body").style.color = "white";
+                darkMode = !darkMode;
+            }
+        }
+    </script>
+</html>
