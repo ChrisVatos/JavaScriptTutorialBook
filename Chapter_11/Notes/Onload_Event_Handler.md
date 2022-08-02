@@ -13,4 +13,15 @@
 → There is a special built-in event to handle the event of the DOM loading
    
     → DOMContentLoaded()
+
+    → This event will get fired immediately after the DOM for the page has been constructed when the event is set
+
+→ Example:
+    ```
+    document.addEventListener("DOMContentLoaded", (e) => {
+        console.log(e);
+    });
+    ```
+
+
     
