@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <title>JS Tester</title>
+        <style>
+            .box {
+                width: 200px;
+                height: 100px;
+                border: 1px solid black
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box" id="box0">Box #1</div>
+            <div class="box" id="box1">Box #2</div>
+            <div class="box" id="box2">Box #3</div>
+            <div class="box" id="box3">Box #4</div>
+        </div>
+
+        <script>
+            let boxes = document.querySelectorAll(".box");
+            let container = document.querySelector(".container");
+
+            container.addEventListener("click", function() {console.log(4)});
+            // container.addEventListener("click", function() {console.log(1)}, true);
+
+            for(let i = 0; i < boxes.length; i++) {
+                boxes[i].addEventListener("click", function() {
+                    console.log(3);
+                    console.log(boxes[i].textContent);
+                });
+                
+            }
+
+            for(let i = 0; i < boxes.length; i++) {
+                boxes[i].addEventListener("click", function() {
+                    console.log(2);
+                    console.log(boxes[i].textContent);
+                },true);
+                
+            }
+    
+        </script>
+    </body>
+</html>

@@ -1,8 +1,8 @@
 # DOM Event Flow
 
-→ "Event Bubbling" is what happens when you trigger the handlers on an element. Moves from the inner element to the outer element (child to parent)
+→ "Event Bubbling" moves from the inner element to the outer element (child to parent):
 
-→ This moving from the outer element to the inner element is called "event capturing" (parent to child): 
+→ "Event Cappturing" moves from the outer element to the inner element (parent to child): 
 
     →  You can use the useCapture argument of addEventListener() (the third argument) and set it to true (false by default)
 

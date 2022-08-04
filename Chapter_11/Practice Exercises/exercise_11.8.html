@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Practice Exercise 11.8
+        </title>
+
+        <body>
+            <div class = "output"></div>
+
+            <input type="text" name="input1" placeholder = "First Input">
+            <input type="text" name="input2" placeholder = "Second Input">
+        </body>
+
+        <script> 
+            let output = document.querySelector(".output");
+            let inputs = document.querySelectorAll("input");
+
+            inputs.forEach(element => { 
+                element.addEventListener("keydown", isNumber);
+                element.addEventListener("keyup", function() {
+                        console.log(event.key);
+                });
+                element.addEventListener("pasted", function(){console.log("pasted")});
+            });
+
+            function isNumber() {
+                let input = event.key;
+                if(!isNaN(input)) {
+                    output.innerText += input;
+                }
+            }
+        
+        </script>
+    </head>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <title>JS Tester</title>
+    </head>
+    <body> 
+        <div class="output1"></div>
+    
+        <input type="text" placeholder="First Name" name="first"><br>
+        <input type="text" placeholder="Last Name" name="last"><br>
+
+        <script> 
+            let output = document.querySelector(".output1");
+            let inputBoxes = document.querySelectorAll("input");
+            for(let i = 0; i < inputBoxes.length; i++) {
+                inputBoxes[i].addEventListener("change", changeInfo);
+                inputBoxes[i].addEventListener("blur", function() {console.log(`Trigger Element: ${event.target.name}, Type: ${event.type}`)});
+                inputBoxes[i].addEventListener("focus", function() {console.log(`Trigger Element: ${event.target.name}, Type: ${event.type}`)});
+            }
+
+            function changeInfo() {
+                let trigger = event.target;
+                if(trigger.name === "first") {
+                    outputMessage("First name changed to " + trigger.value);
+                } else {
+                    outputMessage("Last name changed to " + trigger.value);
+                }
+            }
+
+            function outputMessage(message) {
+                output.textContent = message;
+            }
+        </script>
+    </body>
+</html>
