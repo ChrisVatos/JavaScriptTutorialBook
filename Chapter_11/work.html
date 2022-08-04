@@ -1,50 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>JS Tester</title>
-    </head>
-
     <body>
-        <div class="output"></div>
-        <input type="text" name="message" placeholder="Your Message">
-        <button class="btn1">Button 1</button>
-        <button class="btn2">Button 2</button>
+
+        <style>
+        div {
+            border: 1px solid black;
+            margin-left: 5px;
+        }
+        </style>
+
+        <div id="message">Bubbling events</div>
+        <div id="output">
+        1
         <div>
-            <button class="btn3">Log</button>
+            2
+            <div>
+            3
+            <div>
+                4
+                <div>5</div>
+            </div>
+            </div>
         </div>
+        </div>
+        <script>
 
-        
- <script>
-  const myInput = document.querySelector("input[name='message']");
-  const output = document.querySelector(".output");
-  const btn1 = document.querySelector(".btn1");
-  const btn2 = document.querySelector(".btn2");
-  const btn3 = document.querySelector(".btn3");
-  const log = [];
-  btn1.addEventListener("click", tracker);
-  btn2.addEventListener("click", tracker);
-  btn3.addEventListener("click", (e) => {
-      console.log(log);
-  });
-  function tracker(e) {
-      output.textContent = myInput.value;
-      const ev = e.target;
-      console.dir(ev);
-      const temp = {
-          message: myInput.value,
-          type: ev.type,
-          class: ev.className,
-          tag: ev.tagName
-      };
-      log.push(temp);
-      myInput.value = "";
-  }
-</script>
-
+        function bubble() {
+            console.log(this.innerText);
+        }
+        let divs = document.getElementsByTagName("div");
+        for (let i = 0; i < divs.length; i++) {
+            divs[i].addEventListener("click", bubble, true);
+        }
+        </script>
     </body>
-
-</html>
-
-
-
+ </html>
 
