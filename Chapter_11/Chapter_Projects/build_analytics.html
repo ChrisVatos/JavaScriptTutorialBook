@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Analytics
+        </title>
+    </head>
+
+    <body>
+        <h1>Welcome to the Analytics Builder!</h1>
+        <div class = "container">
+            <div class = "box" id = "box1">Box 1</div>
+            <div class = "box" id = "box2">Box 2</div>
+            <div class = "box" id = "box3">Box 3</div>
+            <div class = "box" id = "box4">Box 4</div>
+        </div>
+        <button id = "log">See History</button>
+    </body>
+
+    <style>
+        .box {
+            border: 1px solid black;
+            margin: 1rem;
+            height: 2rem;
+            width: 5rem;
+            text-align: center;
+        }
+
+        #log {
+            background-color:darksalmon;
+            height: 2rem;
+            width: 6rem;
+            position: absolute;
+            left: 18px;
+            border-radius: 5rem;
+        }
+    </style>
+
+    <script>
+        let logDetails = [];
+        let container = document.querySelector(".container");
+        let button = document.querySelector("#log");
+        container.addEventListener("click", addElement);
+        button.addEventListener("click", function() {console.log(logDetails)});
+
+        function addElement() {
+            let elementClicked = event.target;
+
+            if(elementClicked.id != "") {
+                let objectToBeAdded  = {
+                            textContent: elementClicked.textContent,
+                            id: elementClicked.id,
+                            tagName: elementClicked.tagName,
+                            className: elementClicked.className
+                }
+
+                logDetails.push(objectToBeAdded);
+                console.dir(elementClicked);
+            }
+        }
+
+    </script>
+</html>

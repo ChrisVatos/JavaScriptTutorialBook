@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Practice Exercise 11.10
+        </title>
+    </head>
+
+    <body>
+        <div id = "output"></div>
+        <form>
+            <input type = "text" id = "firstName" name = "firstName" placeholder = "First Name">
+            <input type = "text" id = "lasttName" name = "lastName" placeholder = "Last Name">
+            <input type = "number" id = "age" name = "age" placeholder = "Age">
+            <input type = "submit" value = "submit">
+        </form>
+    </body>
+
+    <script>
+        let output = document.querySelector("#output");
+        let form = document.querySelector("form");
+        form.addEventListener("submit", checker);
+ 
+
+        function checker() {
+            let valid = true;
+            if(form.firstName.value === "") {
+                message("Missing first name!")
+                valid = false;
+            }
+
+            if(form.lasttName.value === "") {
+                message("Missing last name!")
+                valid = false;
+            }
+
+            if(form.age.value < 19) {
+                message("Must be over 19 years old");
+                valid = false;
+            }
+
+            if(valid === false) {
+                event.preventDefault();     // prevents the submission of inputs if a check fails
+            }
+        }
+
+        function message(m) {
+            output.innerText = m;
+        }
+
+
+    </script>
+</html>
