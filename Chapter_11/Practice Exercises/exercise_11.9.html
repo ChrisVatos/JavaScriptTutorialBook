@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <title>JS Tester</title>
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+                background-color: white;
+            }
+            .red {
+                background-color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="box">1
+            <div id="dragme" draggable="true">
+                Drag Me Please!
+            </div>
+        </div>
+        <div class="box">2</div>
+
+        <script>
+            let item = document.querySelector("#dragme");
+            item.addEventListener("dragstart", function() {
+                this.style.opacity = 0.5;
+                item = event.target;        // event.target is whatever gets picked up and dragged
+            }); 
+            item.addEventListener("dragend", function() {this.style.opacity = 1.0});    
+
+            let dropOffBoxes = document.querySelectorAll(".box");
+            dropOffBoxes.forEach(element => {
+                element.addEventListener("dragenter", function() {
+                    event.target.classList.add("red");       // event.target is the element the dragged element will be dropped too
+                });
+
+                element.addEventListener("dragleave", function() {
+                    event.target.classList.remove("red");   // event.target is the element the dragged element will be dropped too
+                }); 
+
+                element.addEventListener("dragover", function() {event.preventDefault()});
+
+                element.addEventListener("drop", function() {
+                    if(event.target.classList[1] == "red") {    // event.target is the element the dragged element will be dropped too
+                        event.preventDefault();
+                        event.target.appendChild(item);         // event.target is the element the dragged element will be dropped too
+                    }
+                    
+                });
+
+            });
+        </script>
+    </body>
+</html>
