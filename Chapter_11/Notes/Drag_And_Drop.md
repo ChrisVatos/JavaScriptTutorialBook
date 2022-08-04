@@ -85,11 +85,11 @@
 
 → Usually, before you prevent the default behavior, you would do some checks to see whether the element that is being dropped can be accepted at that place. In the example above, we check whether the class name of the element that it is being dropped to is box. If that's the case, we append holderItem as a child to the box:
 
-    ```
+
     if (event.target.className == "box") {
             event.target.appendChild(holderItem);
         }
-        }
+    }
     ```
 
     
