@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Mouse Position Tracker
+        </title>
+
+        <style>
+            div {
+                height: 20rem;
+                width: 20rem;
+                border-radius: 5rem;
+                border: 1px solid black;
+                display: inline-block;
+                
+            }
+
+            .active {
+                background-color: red;
+            }
+
+            .output {
+                text-align: center;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div class = "circle">
+            <h3 class = "output"></h3>
+        </div>
+    </body>
+
+    <script>
+        let circle = document.querySelector('div');
+        let output = document.querySelector('.output');
+
+        circle.addEventListener("mouseover", function() {
+            circle.classList.add("active");
+        });
+
+        circle.addEventListener("mouseout", function() {
+            circle.classList.remove("active");
+        });
+
+        circle.addEventListener("mousemove", function() {
+            let xPos = event.clientX;       // event.clientX retrieves the X position of the mouse when called onmousemove
+            let yPos = event.clientY;       // event.clientY retrieves the Y position of the mouse when called onmousemove
+            output.innerText = `x Position: ${xPos}
+                                y Position: ${yPos}`;
+            
+        });
+    </script>
+
+    
+</html>

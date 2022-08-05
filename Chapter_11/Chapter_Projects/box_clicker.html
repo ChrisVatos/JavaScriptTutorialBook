@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Click Me Game</title>
+        <style>
+            .output {
+                width: 500px;
+                height: 500px;
+                border: 1px solid black;
+                margin: auto;
+                text-align: center;
+            }
+            .box {
+                width: 50px;
+                height: 50px;
+                position: relative;
+                top: 50px;
+                left: 20%;
+                background-color: red;
+            }
+            .message {
+                text-align: center;
+                padding: 10px;
+                font-size: 1.3em;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="output"></div>
+        <div class="message"></div>
+
+        <script>
+            let playArea = document.querySelector(".output");
+            let message = document.querySelector(".message");
+
+            let clickableObject = document.createElement("div");
+            clickableObject.classList.add("box");
+            playArea.appendChild(clickableObject);
+
+            message.innerText = "Press the Red Box to Start"
+
+            function getRandom(maxValue) {
+                let number = Math.floor(Math.random() * maxValue) + 1;
+                return number;
+            }
+
+            let game = {
+                    start: null,
+                    end: null
+            }
+
+            clickableObject.addEventListener("click", function() {
+                clickableObject.style.display = "none";
+
+                setTimeout(addBox, getRandom(2500))
+
+                if(game.start === null) {
+                    message.innerText = "Loading . . ."
+                } else {
+                    let currentDate = new Date()
+                    game.end = currentDate.getTime();
+
+                    let timeTaken = (game.end - game.start) / 1000;
+                    message.innerText = `It took ${timeTaken} seconds to click the box!` 
+                }
+            });
+
+            function addBox() {
+                let currentDate = new Date()
+                game.start = currentDate.getTime();
+                clickableObject.style.left = getRandom(450)+"px";
+                clickableObject.style.top = getRandom(450)+"px";
+                clickableObject.style.display = "block";
+                message.innerText = "Click it . . ."
+            }
+        </script>
+    </body>
+</html>
