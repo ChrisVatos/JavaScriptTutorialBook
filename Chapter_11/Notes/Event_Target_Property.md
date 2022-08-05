@@ -27,3 +27,4 @@
 
 → In the above example, the event.target is the button element
 
+→ We can access the element that fired an event by calling event.target. This property holds the element that fired an event
