@@ -29,7 +29,6 @@
 
 → Example: This logs null because regex is case sensitive
 
-  
     let text = "I love JavaScript!";
     console.log(text.match(/javascript/));
 
@@ -64,14 +63,14 @@
     let text = "I love React and JavaScript!";
     console.log(text.match(/javascript|nodejs|react/i));
 
-→ Result:
+    Result:
 
-    [
-        'React',
-        index: 7,
-        input: 'I love React and JavaScript!',
-        groups: undefined
-    ]
+        [
+            'React',
+            index: 7,
+            input: 'I love React and JavaScript!',
+            groups: undefined
+        ]
 
 → If we wanted to find all matches, we could specify the global modifier, g
 
@@ -83,9 +82,9 @@
     let text = "I love React and JavaScript!";
     console.log(text.match(/javascript|nodejs|react/gi));
 
-→ Result:
+    Result:
 
-    ['React', 'JavaScript' ]
+        ['React', 'JavaScript' ]
 
 → As soon as you specify g, the match function will just return an array of the matching words
 
@@ -95,31 +94,33 @@
 
     console.log(text.match(/[a-zA-Z0-9]/));
 
-→ The example above specifies three possible ranges. It will match any lowercase or uppercase letter from a to z and all numeric characters as well
+    → The example above specifies three possible ranges. It will match any lowercase or uppercase letter from a to z 
+      and all numeric characters as well
 
 → Example 2: Wildcard Character
 
     let text = "äé!";
     console.log(text.match(/[a-zA-Z0-9]/g));
 
-→ To address the difficulty of complex characters not matching an expression, the dot (".") functions as a special wildcard character in regex that can match any character
+    → To address the difficulty of complex characters not matching an expression, the dot (".") functions 
+      as a special wildcard character in regex that can match any character
 
 → Example 3: Escape Character
 
     let text = "Just some text.";
     console.log(text.match(/\./g));
 
-→ Result:
+    Result:
 
-    ['.']
+        ['.']
 
-→ To find a match for special characters (ones used in regex to specify a pattern), you can escape it using a backslash
+    → To find a match for special characters (ones used in regex to specify a pattern), you can escape it using a backslash
 
-→ If we escape d, \d, it matches any digit
+    → If we escape d, \d, it matches any digit
 
-→ If we escape s, \s, it matches any whitespace character
+    → If we escape s, \s, it matches any whitespace character
 
-→ If we escape b, \b, it matches text only when it's at the beginning of a word
+    → If we escape b, \b, it matches text only when it's at the beginning of a word
 
 ## Groups
 
