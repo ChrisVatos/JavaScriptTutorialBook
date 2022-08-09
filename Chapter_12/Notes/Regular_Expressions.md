@@ -12,9 +12,7 @@
 
 → They can also be used for form validation, as with regex you can specify valid patterns for field entries such as email addresses or phone numbers
 
-→ Regex is not only useful for finding strings, but can also be used for replacing strings. By now you might think, so regex is amazing, but is there a catch? 
-
 → By now you might think, so regex is amazing, but is there a catch?  Yes. At first, regex might kind of look like your neighbor's cat walked over your keyboard and just typed some random characters by accident. This regex checks for a valid email, for example:
 
 
-    → /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/g
+    /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/g
