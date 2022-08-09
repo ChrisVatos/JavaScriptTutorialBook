@@ -6,7 +6,9 @@
 
 → There are different regex implementations
 
-    → This means that depending on the interpreter, regex might differ a bit in the way they're written. However, they are somewhat standardized, so you write them (almost) the same for all versions of regex
+    → This means that depending on the interpreter, regex might differ a bit in the way they're written. 
+    
+    → However, they are somewhat standardized, so you write them (almost) the same for all versions of regex
 
 
 
