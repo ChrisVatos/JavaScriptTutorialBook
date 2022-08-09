@@ -29,17 +29,17 @@
 
 → Example: This logs null because regex is case sensitive
 
-    ```
+  
     let text = "I love JavaScript!";
     console.log(text.match(/javascript/));
-    ```
+
 
 → If you want it to be case-insensitive, you can specify this using an i after the slash:
 
-    ```
+  
     let text = "I love JavaScript!";
     console.log(text.match(/javascript/i));
-    ```
+  
 
 → The result is an object, containing the found match and the index it started on, as well as the input that was looked through. The groups are undefined. You can create groups with round parentheses, as you'll see when we get to the section on groups
 
