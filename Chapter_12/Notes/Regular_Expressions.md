@@ -132,11 +132,13 @@
     let text = "I love JavaScript!";
     console.log(text.match(/(love|dislike)\s(javascript|spiders)/gi));
 
-→ Here it is going to look for either "love" or "dislike", followed by a whitespace character, followed by "javascript" or "spiders", and it will do so for all occurrences while ignoring whether they are in uppercase or lowercase
+    → Here it is going to look for either "love" or "dislike", followed by a whitespace character, 
+      followed by "javascript" or "spiders", and it will do so for all occurrences while ignoring whether 
+      they are in uppercase or lowercase
 
-→ Result: 
+    Result: 
 
-    ['love JavaScript']
+        ['love JavaScript']
 
 
 → Example 2: If we only want it to be present 0 or 1 times, we can use the question mark ("?")
@@ -144,11 +146,11 @@
     let text = "You are doing great!";
     console.log(text.match(/n?g/gi));
 
-→ This looks for a g character that may or not may be preceded by an n
+    → This looks for a g character that may or not may be preceded by an n
 
-→ Result: 
+    Result: 
 
-    ['ng', 'g']
+        ['ng', 'g']
 
 
 → Example 3: Matching for a group that repeats, using the "+" character
@@ -156,11 +158,11 @@
     let text = "I love apples aand caaandy";
     console.log(text.match(/(a)+/g));         
 
-→ Matches with any "a" repeated one or more times
+    → Matches with any "a" repeated one or more times
 
-→ Result: 
+    Result: 
 
-    ['a', 'aa', 'aaa']
+        ['a', 'aa', 'aaa']
 
 
 → Example 4: Matching for a group that repeats, using the "*" character
@@ -168,11 +170,11 @@
     let text = "Joe's score is 123a and George's score is 123123123a";
     console.log(text.match(/(123)*a/g));     
 
-→ Matches with any "a" preceeded by "123" zero or more times
+    → Matches with any "a" preceeded by "123" zero or more times
 
-→ Result: 
+    Result: 
 
-    ['123a', 'a', '123123123a']
+        ['123a', 'a', '123123123a']
 
 
 → Example 5: Matching for a group that repeats, using {min, max}
@@ -180,9 +182,9 @@
     let text = "abcabcabc";
     console.log(text.match(/(abc){1,2}/));
 
-→ Matches with "abc" that is repeated once or twice
+    → Matches with "abc" that is repeated once or twice
 
-→ Result:
+    Result:
 
     ['abcabc', 'abc', index: 0, input: 'abcabcabc', groups: undefined]
 
@@ -192,7 +194,7 @@
     let text = "I love JavaScript!";
     console.log(text.match(/(?<language>javascript)/i));
 
-    → Result:
+    Result:
 
         [
             'JavaScript',
