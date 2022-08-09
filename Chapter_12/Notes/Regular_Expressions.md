@@ -186,7 +186,7 @@
 
     Result:
 
-    ['abcabc', 'abc', index: 0, input: 'abcabcabc', groups: undefined]
+        ['abcabc', 'abc', index: 0, input: 'abcabcabc', groups: undefined]
 
 
 → Example 6: In order to specify groups, we'll have to name them
