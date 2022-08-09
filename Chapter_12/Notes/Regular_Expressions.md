@@ -190,7 +190,7 @@
         ['abcabc', 'abc', index: 0, input: 'abcabcabc', groups: undefined]
 
 
-→ Example 6: In order to specify groups, we'll have to name them
+→ Example 6: In order to specify groups, we'll have to name them between angle brackets (< >)
 
     let text = "I love JavaScript!";
     console.log(text.match(/(?<language>javascript)/i));
