@@ -44,10 +44,10 @@
 → The result is an object, containing the found match and the index it started on, as well as the input that was looked through. The groups are undefined. You can create groups with round parentheses, as you'll see when we get to the section on groups
 
     [
-    'JavaScript',
-    index: 7,
-    input: 'I love JavaScript!',
-    groups: undefined
+        'JavaScript',
+        index: 7,
+        input: 'I love JavaScript!',
+        groups: undefined
     ]
 
 
