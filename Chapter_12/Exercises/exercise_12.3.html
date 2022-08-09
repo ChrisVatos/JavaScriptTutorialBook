@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Practice Exercise 12.3
+        </title>
+    </head>
+
+    <script>
+        function myFunction() {
+            let lastOne = "";
+            
+            for(let i = 0; i < arguments.length; i++) {
+                lastOne = arguments[i];
+            }
+           
+            return lastOne;
+        }
+
+        console.log(myFunction("hi","my","name", "is", "Valadi", 2));
+
+    </script>
+</html>

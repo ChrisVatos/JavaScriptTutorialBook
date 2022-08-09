@@ -206,6 +206,55 @@
         ]
 
 
+## Practical Regex
+
+→ Regex can be of great use in many situations—anywhere you need to match certain string patterns
+
+    → We are going to discuss how you can use regex in combination with other string methods
+
+### Searching and Replacing Strings
+
+→ We can use regex along with the string methods seen in Chapter 8 to be more precise and thorough with our code
+
+→ Example:
+
+    let text = "Coding is fun. Coding opens up a lot of opportunities.";
+    console.log(text.replace("Coding", "JavaScript"));
+
+    Result:
+
+        JavaScript is fun. Coding opens up a lot of opportunities.
+
+
+→ Same Example with Regex: Replacing all instances of a word in a string 
+
+    let text = "Coding is fun. Coding opens up a lot of opportunities.";
+    console.log(text.replace(/Coding/g, "JavaScript"));     // Use the global modifier g and no " " around the regex expression
+
+    Result:
+
+        JavaScript is fun. JavaScript opens up a lot of opportunities.
+
+
+### Email Validation
+
+→ There are 5 parts to any email address:
+
+    1) name: One or more alphanumerical characters, underscores, dashes or dots ([a-zA-Z0-9._-]+)
+    2) @: Literal character (@)
+    3) domain: One or more alphanumerical characters, underscores, dashes or dots ([a-zA-Z0-9._-]+)
+    4) . : Literal dot (\.)
+    5) extension: One or more alphanumerical characters, underscores, dashes or dots ([a-zA-Z0-9._-]+)
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <title>JavaScript Course</title>
+    </head>
+    <body>
+        <div class="output"></div>
+        <input type="text" placeholder="Enter Email">
+        <button>Check</button>
+
+        <script>
+            let input = document.querySelector("input");
+            let output = document.querySelector(".output");
+            let button = document.querySelector("button");
+
+            button.addEventListener("click", validate);
+
+            function validate() {
+                let inputEmail = input.value;
+                let validEmailString = "([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-])+";
+                let validEmail = new RegExp(validEmailString, 'g');
+                let repsonse = "";
+
+                if(validEmail.test(inputEmail)){        // RegExp.test(string) returns true if string matches the RegExp
+                    response = "Valid Email";
+                    output.style.color = "green";
+ 
+                } else {
+                    response = "Invalid Email";
+                    output.style.color = "red";
+                }
+
+                output.textContent = response;
+                input.value = "";
+                input.placeholder = "Enter Email";
+                
+            }
+        </script>
+    </body>
+</html>
