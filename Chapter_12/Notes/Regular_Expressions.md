@@ -192,15 +192,15 @@
     let text = "I love JavaScript!";
     console.log(text.match(/(?<language>javascript)/i));
 
-→ Result:
+    → Result:
 
-    [
-        'JavaScript',
-        'JavaScript',
-        index: 7,
-        input: 'I love JavaScript!',
-        groups: [Object: null prototype] { language: 'JavaScript' }
-    ]
+        [
+            'JavaScript',
+            'JavaScript',
+            index: 7,
+            input: 'I love JavaScript!',
+            groups: [Object: null prototype] { language: 'JavaScript' }
+        ]
 
 
 
