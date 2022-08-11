@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Complete JavaScript Course</title>
+    </head>
+
+    <body>
+ 
+    
+    <script>
+        
+        console.log(document.cookie);
+
+        function createCookie(cookieName, cookieValue, days) {
+            try{
+                if(isNaN(days)) {
+                    throw "Not a Number"
+                } else {
+                    let expiryDate = new Date(new Date().getTime() + (days*24*60*60*1000));
+                    document.cookie = `${cookieName}=${cookieValue};expires=${expiryDate};path=/`;
+                }
+            } catch(e) {
+                console.error(e);
+            }
+        }
+
+        function readCookie(cookieName) {
+            let cookieValue = false;
+            let cookieList = document.cookie.split(";");
+        
+
+            for(let i = 0; i < cookieList.length; i++) {
+                let currentCookie = cookieList[i];
+
+                if(currentCookie.charAt(0) == " ") {
+                    cookieList[i] = cookieList[i].trim();
+                   
+                }
+
+                if(cookieList[i].startsWith(cookieName)) {
+                    cookieValue = cookieList[i].substring(cookieName.length + 1);
+                } else {
+                    continue;
+                }
+               
+            }
+            return cookieValue;
+        }
+
+        function deleteCookie(cookieName) {
+            createCookie(cookieName, "", -1);
+        }
+
+         createCookie("name", "Chris", 2);
+         createCookie("race", "greek", 1);
+         console.log(readCookie("name"));
+         deleteCookie("race");
+         deleteCookie("name");
+         createCookie("gfName", "Lauren", 100);
+         createCookie("broName", "George",1000);
+         console.log(readCookie("broName"));
+         console.log(readCookie("gfName"));
+         deleteCookie("broName");
+
+         
+
+
+
+
+
+    </script>
+    </body>
+</html>
