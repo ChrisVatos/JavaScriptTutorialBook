@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>
+            Practice Exercise 12.5
+        </title>
+    </head>
+
+    <body>
+        <input id = "input" placeholder = "Enter number">
+        <button id = "check">Check</button>
+    </body>
+
+    <script>
+
+        let input = document.getElementById("input");
+        document.querySelector("button").addEventListener("click", function() {test(input.value)});
+
+     
+        function test(val) {
+            try {
+                if(isNaN(val)){
+                    throw "Not a number";
+                } else {
+                    console.log("Got number");
+                } 
+            }
+            
+            catch(e) {
+                console.log(e);
+            } finally {
+                console.log("Done " + val);
+                input.value = "";
+                input.placeholder = "Enter number"
+            }
+            
+            }
+        
+    </script>
+</html>
