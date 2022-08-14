@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Practice Exercise 12.8
+        </title>
+    </head>
+
+    <body>
+        <script>
+        let listOfPeople = [        // this is a JSON JS Object
+       
+                { 
+                "name": "Chris",
+                "nationality": "Greek"
+                },
+
+                { 
+                "name": "Lauren",
+                "nationality": "Italian"
+                }
+            ];
+
+        let newStr = JSON.stringify(listOfPeople);      // JSON string
+        console.log(typeof newStr);
+        let newObj = JSON.parse(newStr);                // JS object
+        console.log(typeof newObj);
+
+        for(let i = 0; i < newObj.length; i++) {
+            console.log(newObj[i].name, newObj[i].nationality);
+        }
+
+    </script>
+
+
+    </body>
+
+</html>
+
