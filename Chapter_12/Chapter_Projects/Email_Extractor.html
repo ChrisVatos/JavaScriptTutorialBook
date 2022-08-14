@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+<body>
+    <textarea name="txtarea" rows=2 cols=50></textarea> <button>Get Emails</button>
+    <textarea name="txtarea2" rows=2 cols=50></textarea>
+
+    <script>
+        let TA1 = document.querySelectorAll("textarea")[0];
+        let TA2 = document.querySelectorAll("textarea")[1];
+        let button = document.querySelector("button");
+        button.addEventListener("click", filter);
+        let holder = [];
+
+        function filter() {
+            let input = TA1.value;
+            let validEmailRegex = /[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-z]+/g; 
+            
+            let emailArrayNotUnique = input.match(validEmailRegex)
+
+            if(emailArrayNotUnique != null) {
+                let emailArrayUnique = Array.from(new Set(emailArrayNotUnique));
+            
+                for(let i = 0; i < emailArrayUnique.length; i++) {
+                    if(!(holder.includes(emailArrayUnique[i]))) {
+                        holder.push(emailArrayUnique[i]);
+                    }
+                }
+
+                TA2.textContent = holder.join(",");
+        }
+  
+    }
+
+    </script>
+</body>
+</html>
