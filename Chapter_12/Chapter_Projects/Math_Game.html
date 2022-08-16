@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Complete JavaScript Course</title>
+    </head>
+    <body>
+        <span class="val1"></span> <span>+</span> <span class="val2"></span> = <span>
+            <input type="text" name="answer"></span><button>Check</button>
+        <div class="output"></div>
+    </body>
+
+    <script>
+        function app() {
+            let value1 = document.querySelector(".val1");
+            let value2 = document.querySelector(".val2");
+            let input = document.querySelector("input");
+            let button = document.querySelector("button");
+            let output = document.querySelector(".output");
+            let game = {};
+
+            (function init() {
+                button.addEventListener("click", checker);
+                loadQuestion();
+            })();
+
+            function loadQuestion() {
+                val1 = generateRandom(0, 25);
+                val2 = generateRandom(0, 25);
+                game.firstValue = val1;
+                game.secondValue = val2; 
+                game.answer = game.firstValue + game.secondValue;
+                value1.innerText = val1;
+                value2.innerText  = val2;
+            };
+
+            function checker() {
+                let previousAnswer = document.createElement("div");
+                previousAnswer.innerText = `${game.firstValue} + ${game.secondValue} = ${game.answer} (${input.value})`;
+                input.value == game.answer ? (previousAnswer.style.color = "green") : (previousAnswer.style.color = "red");
+                output.appendChild(previousAnswer);
+                input.value = "";
+                loadQuestion();
+            }
+
+            function generateRandom(min, max) {
+                return Math.floor((Math.random() * max + 1) + min);  
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", app);
+
+
+    </script>
+</html>
