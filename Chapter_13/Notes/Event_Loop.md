@@ -74,7 +74,7 @@
     }
 
     → setTimeout() will also be outsourced when the timer is at 0. The
-      callback is placed in the callback queue right away,
+      callback is placed in the callback queue right away
     
     → The event loop won't even check the callback queue until the callstack 
       is empty. So it will still print Sorry I'm late after 9, even though 
