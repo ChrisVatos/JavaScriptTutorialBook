@@ -25,7 +25,7 @@
     }
 
 <p align="center">
-    <img width="750" height="500" src="Simple_Call_Stack.jpg">
+    <img width="250" height="250" src="Simple_Call_Stack.jpg">
 </p>
 
 
