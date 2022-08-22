@@ -49,6 +49,12 @@
       on the call stack already, and will check the callback queue and execute 
       any tasks on there
 
+    → Output: Hi there
+
+              9
+
+              Sorry I'm late
+
 <p align="center">
     <img width="250" height="250" src="Complex_Call_Stack.jpg">
 </p>
