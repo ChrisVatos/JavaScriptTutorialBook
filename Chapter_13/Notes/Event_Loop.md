@@ -45,6 +45,8 @@
     
     → After every action, the event loop will check the "call stack" for work first
 
+    → When setTimeout() expires, the event loop will have done whatever was on the   call stack already, and will check the callback queue and execute any tasks on there.
+
 <p align="center">
     <img width="250" height="250" src="Complex_Call_Stack.jpg">
 </p>
