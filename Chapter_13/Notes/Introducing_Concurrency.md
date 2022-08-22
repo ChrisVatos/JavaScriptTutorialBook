@@ -6,3 +6,17 @@
       
 → Yes, this is tough, but understanding how to leverage concurrency can really enhance the performance of your program by speeding up the process
 
+→ Concurrency is whenever things are happening "at the same time" or in parallel
+
+→ Example:
+
+    We can do a call to some API and not wait for the reply but do something useful in the meantime instead
+
+→ Three Strategies in JS for Concurrency:
+
+    1) callbacks
+    2) Promises
+    3) async/await keywords
+
+
+
