@@ -80,6 +80,12 @@
       is empty. So it will still print Sorry I'm late after 9, even though 
       the timer is at 0
 
+    → Output: Hi there
+
+              9
+
+              Sorry I'm late
+
 
 
 
