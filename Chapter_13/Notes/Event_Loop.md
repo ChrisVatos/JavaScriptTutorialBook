@@ -37,16 +37,17 @@
         return x + y;
     }
 
-    → The setTimeout() task gets outsourced to the browser's web API. 
-      When it's done, this appears in a special place: the "callback queue" 
+    → The setTimeout() task gets outsourced to the browser's web API. When 
+      it's done, this appears in a special place: the "callback queue" 
     
     → When the call stack is empty (and only then!), the event loop will check the  "callback queue" for work to do. 
       If there are any callbacks waiting, they'll be executed, one by one. 
     
     → After every action, the event loop will check the "call stack" for work first
 
-    → When setTimeout() expires, the event loop will have done whatever was on the   call stack already, and will check 
-      the callback queue and execute any tasks on there
+    → When setTimeout() expires, the event loop will have done whatever was 
+      on the call stack already, and will check the callback queue and execute 
+      any tasks on there
 
 <p align="center">
     <img width="250" height="250" src="Complex_Call_Stack.jpg">
