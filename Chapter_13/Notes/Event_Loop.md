@@ -57,6 +57,29 @@
     <img width="250" height="250" src="Complex_Call_Stack2.jpg">
 </p>
 
+
+→ Tricky Example:
+
+    console.log("Hi there");
+    setTimeout(() => console.log("Sorry I'm late"), 0);
+    console.log(add(4, 5));
+    function add(x, y) {
+        return x + y;
+    }
+
+    → setTimeout() will also be outsourced when the timer is at 0. The
+      callback is placed in the callback queue right away,
+    
+    → The event loop won't even check the callback queue until the callstack 
+      is empty. So it will still print Sorry I'm late after 9, even though 
+      the timer is at 0
+
+
+
+
+
+
+
     
 
 
