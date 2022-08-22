@@ -28,6 +28,27 @@
     <img width="250" height="250" src="Simple_Call_Stack.jpg">
 </p>
 
+→ Example:
+
+    console.log("Hi there");
+    setTimeout(() => console.log("Sorry I'm late"), 1000);
+    console.log(add(4, 5));
+    function add(x, y) {
+        return x + y;
+    }
+
+    → The setTimeout() task gets outsourced to the browser's web API. When it's done, this appears in a special place: the "callback queue" 
+    
+    → When the call stack is empty (and only then!), the event loop will check the "callback queue" for work to do. If there are any callbacks waiting, they'll be executed, one by one. 
+    
+    → After every action, the event loop will check the "call stack" for work first
+
+<p align="center">
+    <img width="250" height="250" src="Complex_Call_Stack.jpg">
+</p>
+
+    
+
 
 
 
